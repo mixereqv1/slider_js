@@ -13,16 +13,20 @@
     </head>
     <body>
         <div class="container">
-            <div class="desc"></div>
+            <form action="server.php" method="post" class="form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="img">Dodaj zdjęcie</label>
+                    <input type="file" name="img" id="img" required accept="image/*">
+                </div>
+                <button type="submit" class="btn" name="add_img">Dodaj</button>
+            </form>
             <div class="photos">
-                <!-- <div class="item active a" id="1">1</div>
-                <div class="item b" id="2">2</div>
-                <div class="item c" id="3">3</div> -->
                 <div class="indicators">
                     <button id="previous" class="previous">&lt;</button>
                     <button id="next" class="next">&gt;</button>
                 </div>
             </div>
+            <div class="desc"></div>
         </div>
 
         <script src="scandir.js"></script>
